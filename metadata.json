@@ -1,0 +1,6 @@
+{
+  "name": "Abu Talha Portfolio",
+  "description": "Interactive modern portfolio for a MERN Stack Developer featuring dynamic dark mode, interactive custom cursor tracking, typing hero heading and smooth framer-motion transitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
