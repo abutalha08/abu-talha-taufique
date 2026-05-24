@@ -147,12 +147,12 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "Facebook",
-    url: "https://www.facebook.com/share/1GABdy3EzP/",
+    url: "https://www.facebook.com/share/1G46iHzBqh/",
     icon: "facebook"
   },
   {
     platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/md-abu-talha-taufique/",
+    url: "https://www.linkedin.com/in/md-abu-talha-taufique",
     icon: "linkedin"
   },
   {
