@@ -359,7 +359,7 @@ export default function App() {
                       
                       {/* LinkedIn */}
                       <a
-                        href="https://www.linkedin.com/in/md-abu-talha-taufique/"
+                        href="https://www.linkedin.com/in/md-abu-talha-taufique"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 rounded-full bg-black/60 border border-neon-cyan/30 text-neon-cyan hover:text-white hover:bg-neon-cyan/20 hover:border-neon-cyan hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"
@@ -370,7 +370,7 @@ export default function App() {
 
                       {/* Facebook */}
                       <a
-                        href="https://www.facebook.com/share/1GABdy3EzP/"
+                        href="https://www.facebook.com/share/1G46iHzBqh/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 rounded-full bg-black/60 border border-neon-cyan/30 text-neon-cyan hover:text-white hover:bg-neon-cyan/20 hover:border-neon-cyan hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"
