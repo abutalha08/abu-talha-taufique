@@ -795,9 +795,17 @@ export default function App() {
                     className="h-48 sm:h-52 w-full flex items-center justify-center p-6 relative overflow-hidden text-white"
                   >
                     {/* Floating Badge */}
-                    <span className="absolute top-4 left-4 bg-charcoal-950/85 text-neon-cyan border border-white/5 px-2.5 py-1 rounded text-[10px] font-mono tracking-wider uppercase">
-                      {proj.category}
-                    </span>
+                    {/* Floating Badge (UPDATED: formatted category like first section) */}
+                     <span className="absolute top-4 left-4 bg-charcoal-950/85 text-neon-cyan border border-white/5 px-2.5 py-1 rounded text-[10px] font-mono tracking-wider uppercase">
+                        {/* FIX: formatted category instead of raw value */}
+                        {proj.category === "fullstack"
+                          ? "FULL STACK"
+                          : proj.category === "frontend"
+                          ? "FRONTEND"
+                          : proj.category === "uiux"
+                          ? "UI / UX"
+                          : proj.category}
+                      </span>
 
                     {/* Coding mockup wireframe decoration inside graphic mimicking Leo Carter reference */}
                     <div className="absolute inset-x-8 bottom-0 top-12 bg-charcoal-950/50 border-t border-x border-neon-blue/20 rounded-t-xl p-3 font-mono text-[9px] text-gray-400 overflow-hidden select-none pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
@@ -838,28 +846,66 @@ export default function App() {
                     </div>
 
                     {/* Social connection & link footer */}
-                    <div className="flex items-center space-x-4 border-t border-gray-100 dark:border-gray-800/80 pt-6 mt-6">
-                      {proj.githubUrl && (
-                        <a
-                          href={proj.githubUrl}
-                          target="_blank"
-                          referrerPolicy="no-referrer"
-                          className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all flex items-center gap-1 cursor-pointer"
-                        >
-                          <Github className="w-4 h-4" /> Code
-                        </a>
-                      )}
-                      {proj.liveUrl && (
-                        <a
-                          href={proj.liveUrl}
-                          target="_blank"
-                          referrerPolicy="no-referrer"
-                          className="text-xs font-mono font-medium text-neon-blue dark:text-neon-cyan hover:underline transition-all flex items-center gap-1 cursor-pointer"
-                        >
-                          <ExternalLink className="w-4 h-4" /> Live Preview
-                        </a>
-                      )}
-                    </div>
+                    {/* Social connection & link footer */}
+<div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-gray-100 dark:border-gray-800/80 pt-6 mt-6">
+  
+  {/* FIX: fullstack projects now support separate client/server repos */}
+  {proj.category === "fullstack" ? (
+    <>
+      {/* Client Repo */}
+      {proj.githubClientUrl && (
+        <a
+          href={proj.githubClientUrl}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all flex items-center gap-1 cursor-pointer"
+        >
+          <Github className="w-4 h-4" />
+          Client Code
+        </a>
+      )}
+
+      {/* Server Repo */}
+      {proj.githubServerUrl && (
+        <a
+          href={proj.githubServerUrl}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all flex items-center gap-1 cursor-pointer"
+        >
+          <Github className="w-4 h-4" />
+          Server Code
+        </a>
+      )}
+    </>
+  ) : (
+    // fallback for frontend/uiux projects
+    proj.githubUrl && (
+      <a
+        href={proj.githubUrl}
+        target="_blank"
+        referrerPolicy="no-referrer"
+        className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all flex items-center gap-1 cursor-pointer"
+      >
+        <Github className="w-4 h-4" />
+        Code
+      </a>
+    )
+  )}
+
+  {/* Live link stays same */}
+  {proj.liveUrl && (
+    <a
+      href={proj.liveUrl}
+      target="_blank"
+      referrerPolicy="no-referrer"
+      className="text-xs font-mono font-medium text-neon-blue dark:text-neon-cyan hover:underline transition-all flex items-center gap-1 cursor-pointer"
+    >
+      <ExternalLink className="w-4 h-4" />
+      Live Preview
+    </a>
+  )}
+</div>
                   </div>
                 </motion.article>
               ))}

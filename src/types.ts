@@ -11,6 +11,8 @@ export interface Project {
   description: string;
   tags: string[];
   githubUrl?: string;
+  githubClientUrl?: string;
+  githubServerUrl?: string;
   liveUrl?: string;
   image: string; // Background style/gradient or illustration
   featured: boolean;

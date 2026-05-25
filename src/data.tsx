@@ -60,8 +60,25 @@ export const skillsData: Skill[] = [
 ];
 
 export const projectsData: Project[] = [
+
+ {
+  id: "proj-1",
+  title: "SportNest – Sports Facility Booking System",
+  description: "A full-stack MERN-based sports facility booking platform where users can explore, book, and manage sports venues with role-based access, secure authentication, and real-time booking workflows.",
+  tags: ["Next.js", "Express.js", "MongoDB", "Tailwind CSS", "Better Auth", "REST API", "JWT", "Google OAuth"],
+  githubClientUrl: "https://github.com/abutalha08/sport-nest-client",
+  githubServerUrl: "https://github.com/abutalha08/sport-nest-server",
+  liveUrl: "https://sport-nest-client-phi.vercel.app",
+  image: "linear-gradient(135deg, #0f172a 0%, #020617 100%)",
+  featured: true,
+  category: "fullstack",
+  stats: [
+    { label: "Bookings Flow", value: "Real-time" },
+    { label: "Role System", value: "RBAC" }
+  ]
+},
   {
-    id: "proj-1",
+    id: "proj-2",
     title: "SunCart – Summer Essentials Store",
     description: "A high-performance modern eCommerce platform built with Next.js, secure auth, smart filtering and clean UI.",
     tags: ["Next.js", "BetterAuth", "MongoDB", "Tailwind CSS"],
@@ -76,7 +93,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "proj-2",
+    id: "proj-3",
     title: "KeenKeeper",
     description: "KeenKeeper is a relationship management app that helps you maintain meaningful connections by tracking interactions, setting engagement goals, and reminding you to stay in touch with important people.",
     tags: ["React", "ES6+", "Recharts", "Tailwind CSS", "DaisyUI"],
@@ -91,7 +108,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "proj-3",
+    id: "proj-4",
     title: "DigiTools Platform",
     description: "A modern digital marketplace where users can explore, manage, and purchase high-quality digital tools with a seamless experience.",
     tags: ["React", "ES6+","Tailwind CSS", "DaisyUI"],
