@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
   githubClientUrl: "https://github.com/abutalha08/sport-nest-client",
   githubServerUrl: "https://github.com/abutalha08/sport-nest-server",
   liveUrl: "https://sport-nest-client-phi.vercel.app",
-  image: "linear-gradient(135deg, #0f172a 0%, #020617 100%)",
+  image: "/projects/sportNest-thumbnail.png",
   featured: true,
   category: "fullstack",
   stats: [

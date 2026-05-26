@@ -790,13 +790,21 @@ export default function App() {
                   className="rounded-3xl border border-gray-150/80 dark:border-gray-800 bg-white dark:bg-charcoal-900/50 shadow-xs hover:shadow-lg dark:hover:border-neon-blue/30 overflow-hidden flex flex-col group transition-all"
                 >
                   {/* Card Visual Graphic Area */}
-                  <div
-                    style={{ background: proj.image }}
-                    className="h-48 sm:h-52 w-full flex items-center justify-center p-6 relative overflow-hidden text-white"
-                  >
+                 {/* ==================== শুধুমাত্র এই ভিজ্যুয়াল বক্সের অংশটুকু পরিবর্তন হয়েছে ==================== */}
+                 {/* Card Visual Graphic Area (এখন কোনো গ্রাডিয়েন্ট বা এক্সট্রা টেক্সট ছাড়াই সরাসরি আপনার ইমেজটি দেখাবে) */}
+                    <div className="h-48 sm:h-52 w-full relative overflow-hidden bg-charcoal-950">
+  
+                       {/* ১. সরাসরি ইমেজ রেন্ডার করার ট্যাগ (public ফোল্ডার থেকে আপনার ইমেজের পাথটি এখানে সরাসরি লোড হবে) */}
+                            {proj.image && (
+                                    <img
+                                         src={proj.image}
+                                         alt={proj.title}
+                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"
+                                       />
+                                     )}
                     {/* Floating Badge */}
                     {/* Floating Badge (UPDATED: formatted category like first section) */}
-                     <span className="absolute top-4 left-4 bg-charcoal-950/85 text-neon-cyan border border-white/5 px-2.5 py-1 rounded text-[10px] font-mono tracking-wider uppercase">
+                     <span className="absolute top-4 left-4 bg-charcoal-950/85 text-neon-cyan border border-white/5 px-2.5 py-1 rounded text-[10px] font-mono tracking-wider uppercase z-10">
                         {/* FIX: formatted category instead of raw value */}
                         {proj.category === "fullstack"
                           ? "FULL STACK"
@@ -808,7 +816,7 @@ export default function App() {
                       </span>
 
                     {/* Coding mockup wireframe decoration inside graphic mimicking Leo Carter reference */}
-                    <div className="absolute inset-x-8 bottom-0 top-12 bg-charcoal-950/50 border-t border-x border-neon-blue/20 rounded-t-xl p-3 font-mono text-[9px] text-gray-400 overflow-hidden select-none pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+                    {/* <div className="absolute inset-x-8 bottom-0 top-12 bg-charcoal-950/50 border-t border-x border-neon-blue/20 rounded-t-xl p-3 font-mono text-[9px] text-gray-400 overflow-hidden select-none pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
                       <div className="flex gap-1.5 pb-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-red-400/80" />
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
@@ -817,7 +825,7 @@ export default function App() {
                       <span className="text-neon-cyan">const</span> MernController = () =&gt; &#123; <br />
                       &nbsp;&nbsp;console.log(<span className="text-teal-400">"{proj.title}"</span>); <br />
                       &nbsp;&nbsp;<span className="text-gray-500">// compiled_stable</span> <br />
-                    </div>
+                    </div> */}
 
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/20 to-transparent opacity-90" />
                   </div>
