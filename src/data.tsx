@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "BetterAuth", "MongoDB", "Tailwind CSS"],
     githubUrl: "https://github.com/abutalha08/sun-cart-a08",
     liveUrl: "https://sun-cart-a08.vercel.app/",
-    image: "linear-gradient(135deg, #0f172a 0%, #080f25 100%)",
+    image: "/projects/sunCart-thumbnail.png",
     featured: true,
     category: "frontend",
     stats: [
