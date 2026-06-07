@@ -278,8 +278,8 @@ export default function App() {
                     See My Work
                   </a>
                   <a
-                    href="/Abu Talha Taufique Full Stack Developer Updated Version.pdf"         // public ফোল্ডারে রাখা ফাইলের নাম ও পাথ
-                   download="Abu Talha Taufique Full Stack Developer Resume.pdf"  // ডাউনলোড হওয়ার পর ফাইলটির যে নাম দেখাবে
+                    href="/Abu_Talha_Full_Stack_Developer_Resume.pdf"         // public ফোল্ডারে রাখা ফাইলের নাম ও পাথ
+                   download="Abu_Talha_Full_Stack_Developer_Resume.pdf"  // ডাউনলোড হওয়ার পর ফাইলটির যে নাম দেখাবে
                    target="_blank"
                    rel="noopener noreferrer"
                     className="px-6 py-3.5 rounded-xl text-sm font-semibold text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 bg-white/40 dark:bg-charcoal-900/40 hover:bg-gray-100 dark:hover:bg-charcoal-800 hover:border-neon-cyan/50 hover:shadow-[0_0_15px_rgba(0,243,255,0.15)] transition-all cursor-pointer font-display active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto text-center shadow-xs"
